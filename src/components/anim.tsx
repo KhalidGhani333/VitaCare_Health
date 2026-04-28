@@ -1,4 +1,4 @@
-import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate, type Variants } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
@@ -17,9 +17,9 @@ export function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
   return <motion.span ref={ref}>{rounded}</motion.span>;
 }
 
-export const fadeUp = {
+export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
-  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] } }),
+  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as any } }),
 };
 
 export function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
