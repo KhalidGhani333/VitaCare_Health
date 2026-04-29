@@ -51,8 +51,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10 bg-black/20">
         <div className="container py-5 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/60">
-          <p>© 2026 VitaCare Private Health Ltd · Registered in England & Wales No. 11847362 · CQC Registration No. 1-4829017683</p>
-          <p>GMC Registered · CQC Regulated · ICO Registered</p>
+          <p>Powered By <a href="https://axistechgroup.com/" target="_blank" rel="noopener noreferrer">AxisTechGroup</a></p>
         </div>
       </div>
     </footer>

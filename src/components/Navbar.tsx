@@ -83,9 +83,6 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link to="/contact" aria-label="Health products" className="hidden sm:flex w-11 h-11 rounded-full bg-secondary items-center justify-center hover:bg-accent/20 transition-colors">
-            <ShoppingBag size={18} className="text-primary"/>
-          </Link>
           <Link to="/contact" className="hidden sm:inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground px-5 py-3 rounded-full text-sm font-semibold transition-all active:scale-[0.97]">
             Contact Us <ArrowUpRight size={16}/>
           </Link>

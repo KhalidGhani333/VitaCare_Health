@@ -11,11 +11,6 @@ import svcGp from "@/assets/svc-gp.jpg";
 import svcPharmacy from "@/assets/svc-pharmacy.jpg";
 import svcDental from "@/assets/svc-dental.jpg";
 import svcTelehealth from "@/assets/svc-telehealth.jpg";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
-import team4 from "@/assets/team-4.jpg";
-import team5 from "@/assets/team-5.jpg";
 import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
@@ -51,7 +46,7 @@ function Hero() {
     <section className="bg-gradient-hero pt-16 pb-24 overflow-hidden">
       <div className="container text-center">
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
-          className="font-display text-5xl md:text-7xl font-bold text-primary leading-[1.05] max-w-5xl mx-auto">
+          className="font-display text-5xl md:text-6xl font-bold text-primary leading-[1.05] max-w-5xl mx-auto">
           Trustworthy{" "}
           <span className="inline-block border-2 border-accent rounded-2xl px-4 py-1 text-accent">Care</span>{" "}
           for You<br/> and Your Family
@@ -255,7 +250,7 @@ function BookCTA() {
           initial={{ clipPath: "inset(0 100% 0 0)" }}
           animate={inView ? { clipPath: "inset(0 0% 0 0)" } : {}}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="font-display text-5xl md:text-7xl font-bold leading-tight">
+          className="font-display text-5xl md:text-6xl font-bold leading-tight">
           Book Your Appointment Today
         </motion.h2>
         <Reveal delay={2}>
@@ -363,11 +358,11 @@ function FAQ() {
 
 // ---------- TEAM ----------
 const team = [
-  { img: team1, name: "Dr. James Whitfield", role: "Principal GP & Clinical Director" },
-  { img: team2, name: "Dr. Priya Sharma", role: "GP & Women's Health Specialist" },
-  { img: team3, name: "Dr. Omar Hassan", role: "GP & Chronic Disease Management" },
-  { img: team4, name: "Dr. Sarah Chen", role: "Dental Surgeon (GDC Registered)" },
-  { img: team5, name: "Ms. Helen Drew", role: "Lead Nurse Practitioner" },
+  { img: "https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&q=80&w=800&h=1000", name: "Dr. James Whitfield", role: "Principal GP & Clinical Director" },
+  { img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800&h=1000", name: "Dr. Priya Sharma", role: "GP & Women's Health Specialist" },
+  { img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&h=1000", name: "Dr. Omar Hassan", role: "GP & Chronic Disease Management" },
+  { img: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&q=80&w=800&h=1000", name: "Dr. Sarah Chen", role: "Dental Surgeon (GDC Registered)" },
+  { img: "https://images.unsplash.com/photo-1557862412-317437f64170?auto=format&fit=crop&q=80&w=800&h=1000", name: "Dr. Eleanor Vance", role: "Specialist Doctor" },
 ];
 
 function Team() {
@@ -381,7 +376,7 @@ function Team() {
       </div>
       <div className="mt-14 grid grid-cols-2 md:grid-cols-5 w-full">
         {team.map((m, i) => (
-          <Link to="/team" key={i} className="group relative aspect-[3/4] overflow-hidden">
+          <Link to="/team" key={i} className="group relative aspect-square overflow-hidden">
             <img src={m.img} alt={m.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary via-primary/70 to-transparent p-5 text-white translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
               <p className="font-display font-bold text-lg">{m.name}</p>
@@ -440,14 +435,18 @@ function Blog() {
 
 // ---------- FINAL CTA ----------
 function FinalCTA() {
+  const img1 = "https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&q=80&w=400&h=400";
+  const img2 = "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400&h=400";
+  const img3 = "https://images.unsplash.com/photo-1557862412-317437f64170?auto=format&fit=crop&q=80&w=400&h=400";
+
   return (
     <section className="py-24 bg-white">
       <div className="container">
         <Reveal>
           <div className="relative bg-gradient-cta rounded-[2.5rem] p-12 md:p-16 overflow-hidden">
-            <img src={team1} alt="" loading="lazy" className="hidden md:block absolute -left-4 top-8 w-24 h-24 rounded-2xl object-cover rotate-[-8deg] shadow-card"/>
-            <img src={team2} alt="" loading="lazy" className="hidden md:block absolute left-12 bottom-8 w-20 h-20 rounded-2xl object-cover rotate-[6deg] shadow-card"/>
-            <img src={team3} alt="" loading="lazy" className="hidden md:block absolute right-8 top-12 w-24 h-24 rounded-2xl object-cover rotate-[8deg] shadow-card"/>
+            <img src={img1} alt="" loading="lazy" className="hidden md:block absolute -left-4 top-8 w-24 h-24 rounded-2xl object-cover rotate-[-8deg] shadow-card"/>
+            <img src={img2} alt="" loading="lazy" className="hidden md:block absolute left-12 bottom-8 w-20 h-20 rounded-2xl object-cover rotate-[6deg] shadow-card"/>
+            <img src={img3} alt="" loading="lazy" className="hidden md:block absolute right-8 top-12 w-24 h-24 rounded-2xl object-cover rotate-[8deg] shadow-card"/>
             <div className="relative text-center max-w-2xl mx-auto">
               <Label light>APPOINTMENT</Label>
               <h2 className="mt-4 font-display text-4xl md:text-6xl font-bold text-primary leading-tight">Start Your Health Journey Today</h2>
@@ -488,9 +487,7 @@ export default function Index() {
       <BookCTA />
       <Testimonials />
       <FAQ />
-      <Team />
       <Blog />
-      <FinalCTA />
     </PageShell>
   );
 }
