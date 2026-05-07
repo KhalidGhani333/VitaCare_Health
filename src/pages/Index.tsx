@@ -4,15 +4,15 @@ import { useState, useRef } from "react";
 import { ArrowUpRight, ArrowRight, Mail, Phone, Check, ChevronDown, Calendar, Leaf, Star, CalendarCheck, Quote } from "lucide-react";
 import PageShell from "@/components/PageShell";
 import { CountUp, Reveal, fadeUp } from "@/components/anim";
-import heroDoctor from "@/assets/hero-doctor.jpg";
+import heroDoctor from "@/assets/cta-doctor.jpg";
 import heroNurse from "@/assets/hero-nurse.jpg";
-import heroTeam from "@/assets/hero-team.jpg";
+import heroTeam from "@/assets/team-1.jpg";
 import svcGp from "@/assets/svc-gp.jpg";
 import svcPharmacy from "@/assets/svc-pharmacy.jpg";
 import svcDental from "@/assets/svc-dental.jpg";
 import svcTelehealth from "@/assets/svc-telehealth.jpg";
 import blog1 from "@/assets/blog-1.jpg";
-import blog2 from "@/assets/blog-2.jpg";
+import blog2 from "@/assets/blog-3.jpg";
 import blog3 from "@/assets/blog-3.jpg";
 import ctaDoctor from "@/assets/cta-doctor.jpg";
 
@@ -38,9 +38,9 @@ const Label = ({ children, light = false }: { children: React.ReactNode; light?:
 // ---------- HERO ----------
 function Hero() {
   const cards = [
-    { img: heroDoctor, label: "350K+ Happy Patients", avatars: true },
+    { img: heroDoctor, label: "5K+ Happy Patients", avatars: true },
     { img: heroNurse, label: "24/7 Emergency Support" },
-    { img: heroTeam, label: "20+ Years Trusted NHS-Trained Doctors" },
+    { img: heroTeam, label: "10+ Years Trusted NHS-Trained Doctors" },
   ];
   return (
     <section className="bg-gradient-hero pt-16 pb-24 overflow-hidden">
@@ -106,7 +106,7 @@ function ContactMarquee() {
 // ---------- ABOUT ----------
 function About() {
   const stats = [
-    { n: 24, s: "+", l: "Years of Excellence" },
+    { n: 10, s: "+", l: "Years of Excellence" },
     { n: 97, s: "%", l: "Patient Satisfaction" },
     { n: 35, s: "+", l: "GMC-Registered Specialists" },
     { n: 22, s: "+", l: "Awards & Accreditations" },
